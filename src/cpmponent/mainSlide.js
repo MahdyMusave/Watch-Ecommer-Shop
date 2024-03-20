@@ -4,6 +4,7 @@ import MainBanner2 from "../images/Main-Banner2.jpg";
 import MainBanner3 from "../images/Main-Banner3.jpg";
 // import MainBanner3 from "../../img/Main-Banner3.jpg";
 import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
 const MainSlide = () => {
   const images = [
     {
@@ -31,11 +32,15 @@ const MainSlide = () => {
           {images.map((imageSlide) => {
             // return console.log(imageSlide);
             return (
-             
-                <Carousel.Item key={imageSlide.id}>
-                  <img src={imageSlide.src} alt={imageSlide.alt} className="img-fluid w-100" />
-                </Carousel.Item>
-             
+              <Carousel.Item key={imageSlide.id}>
+                <Link to="/">
+                  <img
+                    src={imageSlide.src}
+                    alt={imageSlide.alt}
+                    className="img-fluid w-100"
+                  />
+                </Link>
+              </Carousel.Item>
             );
           })}
         </Carousel>

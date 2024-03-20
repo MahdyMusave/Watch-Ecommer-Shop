@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 //home
 import Home from "./page/home";
 import TopHeader from "./cpmponent/topHeader";
@@ -9,7 +10,7 @@ import NavBar from "./cpmponent/navbar";
 // import { useState } from "react";
 import Footer from "./cpmponent/footer";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   return (
