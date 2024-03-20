@@ -15,3 +15,23 @@
   text-decoration: none;
   vertical-align: top;
 }
+.navbar-collapse{
+  display: flex;
+  flex-basis: auto;
+  justify-content: end;
+
+}
+.navbar-collapse .navbar-nav{
+  flex-direction: row;
+  align-items: center
+
+}
+.navbar-collapse .navbar-nav a{
+  border: none;
+  font-size:17px !important;
+  font-weight:500 !important;
+
+  padding:0 1.7rem !important;
+  color:rgba(0, 0, 0, 0.6);
+
+}

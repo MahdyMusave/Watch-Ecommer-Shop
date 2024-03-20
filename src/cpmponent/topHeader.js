@@ -25,7 +25,7 @@ const TopHeader = () => {
             </Col>
             <Col className="text-end d-flex flex-row justify-content-end">
               <div className="me-5">
-                <Link to="#" className="text-whitetext-decoration-none  ">
+                <Link to="#" className="text-white text-decoration-none  ">
                   <div className="head-body-inner">
                     <HeartFill className="me-2 "></HeartFill>
                     Wish List
