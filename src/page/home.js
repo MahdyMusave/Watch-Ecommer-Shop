@@ -1,11 +1,12 @@
 import React from "react";
 import MainSlide from "../cpmponent/mainSlide";
-import Types from "../cpmponent/classifcations"
+import ProductCategory from "../cpmponent/productCategory.js";
 
 const Home = (props) => {
   return (
     <>
       <MainSlide />
+      <ProductCategory/>
     </>
   );
 };
