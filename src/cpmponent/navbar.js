@@ -10,7 +10,7 @@ const NavBar = () => {
           <Navbar.Brand href="/">
             <img src="../../img/logo192.png" alt="fish" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="navbar-collapse">
             <Nav>
               <Nav.Link href="/">Home</Nav.Link>

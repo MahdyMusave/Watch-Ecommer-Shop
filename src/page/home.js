@@ -1,16 +1,12 @@
-import React from 'react'
+import React from "react";
+import MainSlide from "../cpmponent/mainSlide";
 
-import Header from "../cpmponent/header";
-
-
-
-const Home = () => {
+const Home = (props) => {
   return (
     <>
-      <Header />
-  
+      <MainSlide />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
