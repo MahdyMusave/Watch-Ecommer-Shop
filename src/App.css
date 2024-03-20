@@ -35,3 +35,36 @@
   color:rgba(0, 0, 0, 0.6);
 
 }
+.carousel .carousel-inner{
+  position:relative;
+}
+.carousel .carousel-inner .card-footer{
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(206, 199, 199, 0.72);
+}
+.carousel .carousel-inner .head-title{
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  z-index: 1;
+  padding: 10px;
+  
+}
+.carousel .carousel-inner .head-title h2{
+  color:tomato;
+  font-size:66px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+.carousel .carousel-inner .card-footer p{
+  font-size: 19px;
+  color: #2f2f2fcf;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1px;
+  
+}
