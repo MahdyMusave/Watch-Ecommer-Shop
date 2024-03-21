@@ -40,6 +40,54 @@ const ProductSlider = () => {
                 <button>Add to Cart</button>
               </p>
             </div>
+            <div className="card">
+              <img
+                className="product-image"
+                src="../../img/brand3.png"
+                alt="banner-img"
+              />
+              <h2>sport sneaker</h2>
+              <p>some description about product ...</p>
+              <p>
+                <button>Add to Cart</button>
+              </p>
+            </div>
+            <div className="card">
+              <img
+                className="product-image"
+                src="../../img/brand3.png"
+                alt="banner-img"
+              />
+              <h2>sport sneaker</h2>
+              <p>some description about product ...</p>
+              <p>
+                <button>Add to Cart</button>
+              </p>
+            </div>
+            <div className="card">
+              <img
+                className="product-image"
+                src="../../img/brand3.png"
+                alt="banner-img"
+              />
+              <h2>sport sneaker</h2>
+              <p>some description about product ...</p>
+              <p>
+                <button>Add to Cart</button>
+              </p>
+            </div>
+            <div className="card">
+              <img
+                className="product-image"
+                src="../../img/brand3.png"
+                alt="banner-img"
+              />
+              <h2>sport sneaker</h2>
+              <p>some description about product ...</p>
+              <p>
+                <button>Add to Cart</button>
+              </p>
+            </div>
           </Carousel>
         </Container>
       </div>
