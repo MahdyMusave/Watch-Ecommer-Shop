@@ -4,7 +4,7 @@ import SubBanner2 from "../images/subbanner2.jpg";
 import SubBanner3 from "../images/subbanner3.jpg";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { Images } from "react-bootstrap-icons";
+
 const ProductCategory = () => {
   const images = [SubBanner1, SubBanner2, SubBanner3];
   return (
