@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Tabs from "react-bootstrap/Tabs";
 import { Tab, Container, TabContent } from "react-bootstrap";
+import ProductSlider from "../cpmponent/productSlider"
 const ProductTable = () => {
   const [key, setKey] = useState("offers");
   return (
@@ -15,22 +16,7 @@ const ProductTable = () => {
           >
             <Tab eventKey="offers" title="offers">
               <TabContent className="py-3 ps-3">
-                <div className="shadow py-3 ps-3 ">
-                  <p>
-                    Den iranska regeringen har infört många hårda och orättvisa
-                    lagar mot afghanska migranter som gör det väldigt svårt att
-                    hitta arbete. Jag är intresserad av programmering men de
-                    tillåter mig inte att gå på universitetet och för att jag
-                    ska kunna öppna ett bankkonto krävs det 100 miljoner iranska
-                    rial, vilket är mycket pengar. Jag försöker därför intensivt
-                    att slutföra några projekt för att så snart som möjligt
-                    kunna få ett visum och lämna Iran. Situationen för mig som
-                    afghan i Iran är mycket svår på grund av de orättvisa
-                    lagarna och jag hoppas kunna komma till ett land med mer
-                    rättvisa och möjligheter att utbilda mig inom mitt
-                    intresseområde programmering.
-                  </p>
-                </div>
+                <ProductSlider/>
               </TabContent>
             </Tab>
             <Tab eventKey="latest" title="latest">
