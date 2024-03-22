@@ -8,10 +8,6 @@ import producdSliderImg3 from "../images/product3.jpg";
 import producdSliderImg4 from "../images/product7.jpg";
 import producdSliderImg5 from "../images/product8.jpg";
 
-
-
-
-
 const ProductTable = () => {
   const [key, setKey] = useState("offers");
   const offersPro = [
@@ -21,7 +17,7 @@ const ProductTable = () => {
       name: "producdSliderImg1",
       price: 300,
       oldPrice: 420,
-      rating: 4,
+      rating: 1,
       qty: 1,
       maxQuantity: 10,
       description:
@@ -34,7 +30,7 @@ const ProductTable = () => {
       name: "producdSliderImg2",
       price: 300,
       oldPrice: 420,
-      rating: 4,
+      rating: 2,
       qty: 1,
       maxQuantity: 10,
       description:
@@ -60,7 +56,7 @@ const ProductTable = () => {
       name: "producdSliderImg4",
       price: 300,
       oldPrice: 420,
-      rating: 4,
+      rating: 3,
       qty: 1,
       maxQuantity: 10,
       description:
@@ -73,7 +69,7 @@ const ProductTable = () => {
       name: "producdSliderImg5",
       price: 300,
       oldPrice: 420,
-      rating: 4,
+      rating: 1,
       qty: 1,
       maxQuantity: 10,
       description:
@@ -89,10 +85,9 @@ const ProductTable = () => {
             activeKey={key}
             onSelect={(k) => setKey(k)}
             id="controlled-tab-example"
-            className="mb-3 ms-4"
           >
             <Tab eventKey="offers" title="offers">
-              <TabContent className="py-3 ps-3">
+              <TabContent>
                 <ProductSlider slides={offersPro} />
               </TabContent>
             </Tab>
