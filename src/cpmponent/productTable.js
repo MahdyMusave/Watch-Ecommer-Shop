@@ -1,9 +1,35 @@
 import React, { useState } from "react";
 import Tabs from "react-bootstrap/Tabs";
 import { Tab, Container, TabContent } from "react-bootstrap";
-import ProductSlider from "../cpmponent/productSlider"
+import ProductSlider from "../cpmponent/productSlider";
+import producdSliderImg1 from "../images/product1.jpg";
+// import producdSliderImg2 from "../images/product2.jpg";
+// import producdSliderImg3 from "../images/product3.jpg";
+// import producdSliderImg4 from "../images/product4.jpg";
+// import producdSliderImg5 from "../images/product5.jpg";
+
+
+
+
+
 const ProductTable = () => {
   const [key, setKey] = useState("offers");
+  const offersPro = [
+    {
+      id: 1,
+      src: producdSliderImg1,
+      name: "producdSliderImg1",
+      price: 300,
+      oldPrice: 420,
+      rating: 4,
+      qty: 1,
+      maxQuantity: 10,
+      description:
+        "More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new lorem ippsum dolor dummy lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go. Cover Flow. Browse through your music collection by flipping..",
+      isAddedToWishList: false,
+    },
+  
+  ];
   return (
     <>
       <div className="productTabs">
@@ -16,7 +42,7 @@ const ProductTable = () => {
           >
             <Tab eventKey="offers" title="offers">
               <TabContent className="py-3 ps-3">
-                <ProductSlider/>
+                <ProductSlider slides={offersPro} />
               </TabContent>
             </Tab>
             <Tab eventKey="latest" title="latest">

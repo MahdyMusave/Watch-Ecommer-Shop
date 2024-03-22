@@ -2,7 +2,9 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-const ProductSlider = () => {
+const ProductSlider = (props) => {
+  let slidess = props.slides;
+  // return console.log(slidess);
   const response = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -28,66 +30,22 @@ const ProductSlider = () => {
         <Container className="shadow">
           <h5 className="text-left mb-4 ms-4">FEATURED PRODUCTS</h5>
           <Carousel responsive={response}>
-            <div className="card">
-              <img
-                className="product-image"
-                src="../../img/brand3.png"
-                alt="banner-img"
-              />
-              <h2>sport sneaker</h2>
-              <p>some description about product ...</p>
-              <p>
-                <button>Add to Cart</button>
-              </p>
-            </div>
-            <div className="card">
-              <img
-                className="product-image"
-                src="../../img/brand3.png"
-                alt="banner-img"
-              />
-              <h2>sport sneaker</h2>
-              <p>some description about product ...</p>
-              <p>
-                <button>Add to Cart</button>
-              </p>
-            </div>
-            <div className="card">
-              <img
-                className="product-image"
-                src="../../img/brand3.png"
-                alt="banner-img"
-              />
-              <h2>sport sneaker</h2>
-              <p>some description about product ...</p>
-              <p>
-                <button>Add to Cart</button>
-              </p>
-            </div>
-            <div className="card">
-              <img
-                className="product-image"
-                src="../../img/brand3.png"
-                alt="banner-img"
-              />
-              <h2>sport sneaker</h2>
-              <p>some description about product ...</p>
-              <p>
-                <button>Add to Cart</button>
-              </p>
-            </div>
-            <div className="card">
-              <img
-                className="product-image"
-                src="../../img/brand3.png"
-                alt="banner-img"
-              />
-              <h2>sport sneaker</h2>
-              <p>some description about product ...</p>
-              <p>
-                <button>Add to Cart</button>
-              </p>
-            </div>
+            {slidess.map((slide, index) => {
+              return (
+                <div className="card" key={index}>
+                  <img
+                    className="product-image"
+                    src={slide.src}
+                    alt="banner-img"
+                  />
+                  <h2>sport sneaker</h2>
+                  <p>some description about product ...</p>
+                  <p>
+                    <button>Add to Cart</button>
+                  </p>
+                </div>
+              );
+            })}
           </Carousel>
         </Container>
       </div>
