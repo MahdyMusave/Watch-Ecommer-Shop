@@ -53,7 +53,10 @@ const ProductCart = (props) => {
           </Link>
         </ButtonGroup>
         <Card.Body>
-          <Link to={`/product/${slideProduct.id}`}>
+          <Link
+            to={`/product/${slideProduct.id}`}
+            className="text-decoration-none"
+          >
             <Card.Title>{slideProduct.name}</Card.Title>
           </Link>
           <div className="d-flex justify-content-between align-items-center">

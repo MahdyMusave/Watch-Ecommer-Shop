@@ -81,3 +81,25 @@
 .productCard img{
   height: 450px;
 }
+.productCard .card-body .card-title {
+  text-align:left;
+  font-size: 18px;
+  color: #777777;
+  font-weight: bolder;
+  opacity: 0.7;
+  letter-spacing: 0.6px;
+}
+.productCard .card-body .price-new {
+  border: none;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.productCard .card-body .price-old{
+  color: #999;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.brandLogo{
+  background-color: #ddd;
+}
