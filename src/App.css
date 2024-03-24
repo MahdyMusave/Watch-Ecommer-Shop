@@ -18,7 +18,7 @@
 .navbar-collapse{
   display: flex;
   flex-basis: auto;
-  justify-content: end;
+  justify-content: flex-end;
 
 }
 .navbar-collapse .navbar-nav{

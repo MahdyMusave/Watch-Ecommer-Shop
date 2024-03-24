@@ -10,7 +10,7 @@ import {
   Globe,
 } from "react-bootstrap-icons";
 // import FormEmail from "./email";
-import FormSubscript from "./form_subscript";
+// import FormSubscript from "./form_subscript";
 
 const Footer = () => {
   return (
@@ -21,7 +21,7 @@ const Footer = () => {
             <Col>
               <div>
                 <h6 className="mb-4">SIGN UP FOR‌OUR‌NEWSLETTER</h6>
-                <FormSubscript />
+                {/* <FormSubscript /> */}
                 <FooterLink href="/">
                   <Social className="me-3">
                     <Facebook />

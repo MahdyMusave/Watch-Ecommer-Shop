@@ -8,18 +8,16 @@ import NavBar from "./cpmponent/navbar";
 // import cartListPage from "./page/cartList";
 // import currentProductPage from "./page/currentProduct";
 // import { useState } from "react";
-import Footer from "./cpmponent/footer";
+import Footer from "./cpmponent/footer_box/footer";
 import "./App.css";
-
 
 function App() {
   return (
     <>
       <Router>
         <div id="App">
-          <TopHeader />    <NavBar />
+          <TopHeader /> <NavBar />
           <Routes>
-        
             <Route exact path="/" element={<Home />} />
             {/* <Route path="/wishList" element={<WishListPage />}></Route> */}
             {/* <Route
@@ -28,7 +26,6 @@ function App() {
             ></Route> */}
             {/* <Route path="/product/:id" element={<CurrentProductPage />}></Route> */}
           </Routes>
-
           <Footer />
         </div>
       </Router>
