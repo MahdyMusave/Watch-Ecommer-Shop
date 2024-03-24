@@ -11,7 +11,7 @@ const ClientCorousel = () => {
         <Container className="p-5">
           <Carousel controls="false">
             <Carousel.Item>
-              <Carousel.Caption className="position-relative mb-4 mt-4">
+              <Carousel.Caption className="clientimg position-relative mb-4 mt-4">
                 <img src={img1} alt="textimonal" className="img-fluid" />
                 <h5>Janet wilson</h5>
                 <span className="text-secoundary">Web Developer</span>
@@ -24,7 +24,7 @@ const ClientCorousel = () => {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <Carousel.Caption className="position-relative mb-4 mt-4">
+              <Carousel.Caption className="clientimg position-relative mb-4 mt-4">
                 <img src={img2} alt="textimonal 2" className="img-fluid" />
                 <h5>Janet wilson</h5>
                 <span className="text-secoundary">Web Developer</span>
@@ -37,7 +37,7 @@ const ClientCorousel = () => {
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <Carousel.Caption className="position-relative mb-4 mt-4">
+              <Carousel.Caption className="clientimg position-relative mb-4 mt-4">
                 <img src={img3} alt="textimonal 3" className="img-fluid" />
                 <h5>Janet wilson</h5>
                 <span className="text-secoundary">Web Developer</span>
