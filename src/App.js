@@ -6,7 +6,7 @@ import TopHeader from "./cpmponent/topHeader";
 import NavBar from "./cpmponent/navbar";
 // import WishListPage from "./page/wishList";
 // import cartListPage from "./page/cartList";
-// import currentProductPage from "./page/currentProduct";
+import CurrentProductPage from "./page/currentProductPage";
 // import { useState } from "react";
 import Footer from "./cpmponent/footer_box/footer";
 import "./App.css";
@@ -25,6 +25,7 @@ function App() {
             element={<CartListPage qVal={quantity} setqVal={setQuantity} />}
             ></Route> */}
             {/* <Route path="/product/:id" element={<CurrentProductPage />}></Route> */}
+            <Route path="/product/:id" element={<CurrentProductPage />} />
           </Routes>
           <Footer />
         </div>
