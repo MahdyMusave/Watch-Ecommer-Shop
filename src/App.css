@@ -116,6 +116,7 @@
   left: 15%;
   right: auto;
 
+
 }
 .textimonial .carousel .carousel-inner{
   box-shadow: 1px 2px 6px 1px rgba(147, 170, 207, 0.27);
@@ -126,6 +127,10 @@ width: 27px!important;
   height: 4px!important;
   background: #827f7f!important;
   border-radius: 50%;
+}
+.textimonial .carousel .carousel-inner img{
+  border-radius: 50%;
+
 }
 .textimonial .carousel .carousel-inner h5{
   color: black;
@@ -139,6 +144,11 @@ width: 27px!important;
   margin-top: 9px;
   font-size: 16px;
   font-weight: 600;
+}
+.textimonial .carousel .carousel-inner p{
+  width: 80%;
+  margin:30px auto;
+
 }
 .subscript-form input{
   width: 64%;

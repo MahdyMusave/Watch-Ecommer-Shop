@@ -16,36 +16,36 @@ const ClientCorousel = () => {
                 <h5>Janet wilson</h5>
                 <span className="text-secoundary">Web Developer</span>
                 <p className="text-dark mt-3">
-                  Rem ipsum doLoremRem ipsum doLorem ipsum ut labore et dolore
-                  ma ipsum ut labore et dolore Rem ipsum doLorem ipsum ut labore
-                  et dolore mamagna.Lorem ipsum doLorem ipsum dolor sit amet,
-                  consectetur adipisicing.
+                  It usually begins with: “Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.” The purpose of lorem ipsum
+                  is to create a natural looking block of text
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <Carousel.Caption className="clientimg position-relative mb-4 mt-4">
                 <img src={img2} alt="textimonal 2" className="img-fluid" />
-                <h5>Janet wilson</h5>
+                <h5>Amir Hassani</h5>
                 <span className="text-secoundary">Web Developer</span>
                 <p className="text-dark mt-3">
                   Rem ipsum doLoremRem ipsum doLorem ipsum ut labore et dolore
                   ma ipsum ut labore et dolore Rem ipsum doLorem ipsum ut labore
-                  et dolore mamagna.Lorem ipsum doLorem ipsum dolor sit amet,
-                  consectetur adipisicing.
+                  et dolore mamagna.It usually begins with: “Lorem ipsum dolor
+                  is to create a natural looking block of text
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <Carousel.Caption className="clientimg position-relative mb-4 mt-4">
                 <img src={img3} alt="textimonal 3" className="img-fluid" />
-                <h5>Janet wilson</h5>
+                <h5>Sara Olsen</h5>
                 <span className="text-secoundary">Web Developer</span>
                 <p className="text-dark mt-3">
-                  Rem ipsum doLoremRem ipsum doLorem ipsum ut labore et dolore
-                  ma ipsum ut labore et dolore Rem ipsum doLorem ipsum ut labore
-                  et dolore mamagna.Lorem ipsum doLorem ipsum dolor sit amet,
-                  consectetur adipisicing.
+                  It usually begins with: “Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.” The purpose of lorem ipsum
+                  is to create a natural looking block of text
                 </p>
               </Carousel.Caption>
             </Carousel.Item>
