@@ -1,15 +1,14 @@
+// import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 //home
 import Home from "./page/home";
 import TopHeader from "./cpmponent/topHeader";
 import NavBar from "./cpmponent/navbar";
-// import WishListPage from "./page/wishList";
-// import cartListPage from "./page/cartList";
 import CurrentProductPage from "./page/currentProductPage";
-// import { useState } from "react";
 import Footer from "./cpmponent/footer_box/footer";
-import "./App.css";
+import WishListPage from "./page/wishList";
 
 function App() {
   return (
@@ -19,12 +18,7 @@ function App() {
           <TopHeader /> <NavBar />
           <Routes>
             <Route exact path="/" element={<Home />} />
-            {/* <Route path="/wishList" element={<WishListPage />}></Route> */}
-            {/* <Route
-            path="/shoppingCart"
-            element={<CartListPage qVal={quantity} setqVal={setQuantity} />}
-            ></Route> */}
-            {/* <Route path="/product/:id" element={<CurrentProductPage />}></Route> */}
+            <Route path="/wishList" element={<WishListPage />} />
             <Route path="/product/:id" element={<CurrentProductPage />} />
           </Routes>
           <Footer />

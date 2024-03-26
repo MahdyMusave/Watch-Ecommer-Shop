@@ -2,7 +2,8 @@ import React from "react";
 import { ButtonGroup, Card, Container } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
 import * as Icon from "react-bootstrap-icons";
-const CurrentProductPage = () => {
+const CurrentProductPage = (props) => {
+  // return console.log(props);
   const priceOld = {
     textDecorationLine: "line-through",
     color: "#faaaa",
