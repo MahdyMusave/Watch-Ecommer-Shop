@@ -1,8 +1,14 @@
 import React from "react";
 import { Container, Table } from "react-bootstrap";
-import { UseSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
-const WishListPage = () => {
+const WishListPage = (props) => {
+  console.log(props);
+  // console.log(useSelector);
+  const productsInWist = useSelector((state) => state.rw.wish);
+  console.log(productsInWist);
+  // const dispatch = useDispatch();
+  // console.log(dispatch);
   return (
     <>
       <div className="wishList mb-5 mt-5">
