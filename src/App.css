@@ -1,0 +1,171 @@
+.text-start .me-5{
+  color: lightgray;
+  margin-bottom: 10px;
+  font-size: 15px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: top;
+  
+}
+.text-end .me-5 .head-body-inner{
+  color: lightgray !important;
+  margin-bottom: 10px;
+  font-size: 15px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: top;
+}
+.navbar-collapse{
+  display: flex;
+  flex-basis: auto;
+  justify-content: flex-end;
+
+}
+.navbar-collapse .navbar-nav{
+  flex-direction: row;
+  align-items: center
+
+}
+.navbar-collapse .navbar-nav a{
+  border: none;
+  font-size:17px !important;
+  font-weight:500 !important;
+
+  padding:0 1.7rem !important;
+  color:rgba(0, 0, 0, 0.6);
+
+}
+.carousel .carousel-inner{
+  position:relative;
+}
+.carousel .carousel-inner .card-footer{
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(206, 199, 199, 0.72);
+}
+.carousel .carousel-inner .head-title{
+  position: absolute;
+  top: 3%;
+  left: 6%;
+  z-index: 1;
+  padding: 10px;
+  
+}
+.carousel .carousel-inner .head-title h2{
+  color:tomato;
+  font-size:66px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+.carousel .carousel-inner .card-footer p{
+  font-size: 19px;
+  color: #2f2f2fcf;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1px;
+  
+}
+.btnGroup{
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  left: 30%;
+  bottom: 25%;
+
+}
+.productCard img{
+  height: 450px;
+}
+.productCard .card-body .card-title {
+  text-align:left;
+  font-size: 18px;
+  color: #777777;
+  font-weight: bolder;
+  opacity: 0.7;
+  letter-spacing: 0.6px;
+}
+.productCard .card-body .price-new {
+  border: none;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.productCard .card-body .price-old{
+  color: #999;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.brandLogo{
+  background-color: #ddd;
+}
+.subscript-form{
+    background-color: rgb(236, 236, 236);
+    padding: 10px 18px;
+    border-radius: 14px;
+    margin: 48px auto;
+}
+
+.textimonial .carousel .clientimg{
+
+  width:70%;
+  left: 15%;
+  right: auto;
+
+
+}
+.textimonial .carousel .carousel-inner{
+  box-shadow: 1px 2px 6px 1px rgba(147, 170, 207, 0.27);
+}
+
+.carousel .carousel-indicators button{
+width: 27px!important;
+  height: 4px!important;
+  background: #827f7f!important;
+  border-radius: 50%;
+}
+.textimonial .carousel .carousel-inner img{
+  border-radius: 50%;
+
+}
+.textimonial .carousel .carousel-inner h5{
+  color: black;
+  margin-top: 9px;
+  font-size: 22px;
+  font-weight: 600;
+
+}
+.textimonial .carousel .carousel-inner span {
+  color: navy;
+  margin-top: 9px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.textimonial .carousel .carousel-inner p{
+  width: 80%;
+  margin:30px auto;
+
+}
+.subscript-form input{
+  width: 64%;
+  padding: 4px 10px;
+  border: none;
+  outline: none;
+  margin-right: 3px;
+  font-size: 16px;
+  font-weight: 400;
+
+}
+.subscript-form button{
+  font-size: 20px;
+  font-weight: 600;
+  padding:4px 16px;
+  margin-left: 10px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+}
