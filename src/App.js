@@ -9,8 +9,11 @@ import NavBar from "./cpmponent/navbar";
 import CurrentProductPage from "./page/currentProductPage";
 import Footer from "./cpmponent/footer_box/footer";
 import WishListPage from "./page/wishList";
-
-function App() {
+import CartListPage from "./page/cartlistpage";
+import { useState } from "react";
+;
+function App(props) {
+  const [quantity, setQuantity] = useState(0);
   return (
     <>
       <Router>
@@ -19,6 +22,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/wishList" element={<WishListPage />} />
+            <Route path="/shoppingCart" element={<CartListPage qVal={quantity} setqVal={setQuantity} />} />
             <Route path="/product/:id" element={<CurrentProductPage />} />
           </Routes>
           <Footer />

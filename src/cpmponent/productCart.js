@@ -10,7 +10,11 @@ import * as Icon from "react-bootstrap-icons";
 
 const ProductCart = (props) => {
   // return console.log(props);
+  console.log(props);
   const slideProduct = props.slidePro;
+  const ClickWish = props.clickWish;
+  const addToCart = props.addToCart;
+  const LoadCurrentItem = props.LoadCurrentItem;
   return (
     <div className="text-center" key={slideProduct.id}>
       <Card className="productCard border-0 position-relative">
@@ -22,6 +26,9 @@ const ProductCart = (props) => {
             variant="top"
             src={slideProduct.src}
             alt={slideProduct.alt}
+            onClick={() => {
+              LoadCurrentItem(props.slideProduct);
+            }}
           />
         </Link>
         <ButtonGroup className="btnGroup d-flex  justify-content-between ml-auto position-absolute btn-group">
@@ -37,7 +44,9 @@ const ProductCart = (props) => {
             variant="dark"
             className="add-to-cart ms-2"
             size="sm"
-            id={slideProduct.name}
+            id={slideProduct.id}
+            name={slideProduct.name}
+            onClick={(e) => addToCart(e, slideProduct)}
           >
             Add to Cart
           </Button>
@@ -46,7 +55,7 @@ const ProductCart = (props) => {
               variant="dark"
               className="eye ms-2"
               size="sm"
-              id={slideProduct.name}
+              onClick={(e) => LoadCurrentItem(e, slideProduct)}
             >
               <Icon.Eye />
             </Button>
