@@ -1,13 +1,29 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { HeartFill, EnvelopeFill, PhoneFill } from "react-bootstrap-icons";
 // import { EnvelopeFill,HeartFill,PhoneFill } from 'react-bootstrap-icons';
 // import { UseSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 // import { Connect } from 'react-redux';
 // import { useState,useEffect } from 'react';
 
-const TopHeader = () => {
+const TopHeader = ({cart}) => {
+  console.log(cart,'cart');
+  const wish = useSelector(
+    (state) =>
+      /*console.log('state', state)*/
+      state.rw.wish
+  );
+
+  const [cartCounter, setCartCounter] = useState(0);
+  const [wishCounter, setWishCounter] = useState(0);
+
+  useEffect(() => {
+    let cartCount = 0;
+  });
+
   return (
     <>
       <section className="header-top bg-dark text-white p-2 sticky-top shadow">

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Tabs from "react-bootstrap/Tabs";
 import { Tab, Container, TabContent } from "react-bootstrap";
 import ProductSlider from "../cpmponent/productSlider";
+
+
 import producdSliderImg1 from "../images/product1.jpg";
 import producdSliderImg2 from "../images/product2.jpg";
 import producdSliderImg3 from "../images/product3.jpg";
