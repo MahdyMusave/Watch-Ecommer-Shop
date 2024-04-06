@@ -3,28 +3,38 @@ import allProducts from "../../services/watches";
 
 const INITIAL_STATE = {
   allProducts: allProducts, //products without qty
-  cart: [], //product with added qty
+ cart:  [], //product with added qty
   currentItem: null,
 };
 
+console.log(INITIAL_STATE);
 // console.log(INITIAL_STATE.allProducts);
 // console.log(actionTypes);
 const cartReducer = (state = INITIAL_STATE, action) => {
-  // console.log(action.type);
-  // console.log(action.payload);
+  // console.log(state, "state", action);
+  // console.log(action.type === actionTypes.LOAD_PRODUCTS);
+
   switch (action.type) {
     case actionTypes.LOAD_PRODUCTS:
+      // console.log(...state.allProducts, "state", action.payload.product);
       return {
         ...state,
         allProducts: [...state.allProducts, action.payload.products],
       };
     case actionTypes.ADD_TO_CART:
+      console.log(action, "actionnnn add to cart");
       //get the item from products array
       //const products = action.payload.products;
+      // console.log(
+      //   state.allProducts.find((pro) => pro.id === action.payload.id),
+      //   "|find"
+      // );
       const item = state.allProducts.find(
         (prod) => prod.id === action.payload.id
       );
       //
+      console.log(item);
+
       if (item.qty === item.maxQuantity) {
         alert("Sorry, the quantity for this product is finished");
         let btn = action.payload.event.currentTarget;
