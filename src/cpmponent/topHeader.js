@@ -9,8 +9,8 @@ import { connect } from "react-redux";
 // import { Connect } from 'react-redux';
 // import { useState,useEffect } from 'react';
 
-const TopHeader = ({cart}) => {
-  console.log(cart,'cart');
+const TopHeader = ({ cart }) => {
+  console.log(cart, "cart");
   const wish = useSelector(
     (state) =>
       /*console.log('state', state)*/
@@ -20,9 +20,13 @@ const TopHeader = ({cart}) => {
   const [cartCounter, setCartCounter] = useState(0);
   const [wishCounter, setWishCounter] = useState(0);
 
-  useEffect(() => {
-    let cartCount = 0;
-  });
+  // useEffect(() => {
+  //   let cartCount = 0;
+  //   cart.forEach((item) => {
+  //     cartCount += item.qty;
+  //   });
+  //   setCartCounter(cartCount);
+  // }, [cart, cartCounter, wish, wishCounter]);
 
   return (
     <>
@@ -50,7 +54,10 @@ const TopHeader = ({cart}) => {
                 </Link>
               </div>
               <div className="me-5">
-                <Link to="#" className="text-white text-decoration-none ">
+                <Link
+                  to="/shoppingCart"
+                  className="text-white text-decoration-none "
+                >
                   <div className="head-body-inner">
                     <HeartFill className="me-2  "></HeartFill>
                     Shopping Cart

@@ -7,18 +7,22 @@ const INITIAL_STATE = {
   currentItem: null,
 };
 
+console.log(INITIAL_STATE);
 // console.log(INITIAL_STATE.allProducts);
 // console.log(actionTypes);
 const cartReducer = (state = INITIAL_STATE, action) => {
-  // console.log(action.type);
-  // console.log(action.payload);
+  // console.log(state, "state", action);
+  // console.log(action.type === actionTypes.LOAD_PRODUCTS);
+  console.log(action, "actionnnn add to cart");
   switch (action.type) {
     case actionTypes.LOAD_PRODUCTS:
+      // console.log(...state.allProducts, "state", action.payload.product);
       return {
         ...state,
         allProducts: [...state.allProducts, action.payload.products],
       };
     case actionTypes.ADD_TO_CART:
+      console.log(state, "stta");
       //get the item from products array
       //const products = action.payload.products;
       const item = state.allProducts.find(

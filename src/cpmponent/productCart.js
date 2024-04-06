@@ -3,23 +3,24 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Card from "react-bootstrap/Card";
 import "react-multi-carousel/lib/styles.css";
 import ReactStars from "react-rating-stars-component";
-
+import { connect } from "react-redux";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import * as Icon from "react-bootstrap-icons";
+import { LoadCurrentItem, addToCart } from "../redux/reducers/cart-action";
 
 const ProductCart = (props) => {
   // return console.log(props);
-  console.log(props);
+  // return console.log(props);
   const slideProduct = props.slidePro;
-  const ClickWish = props.clickWish;
+  const clickWish = props.clickWish;
   const addToCart = props.addToCart;
   const LoadCurrentItem = props.LoadCurrentItem;
   return (
-    <div className="text-center" key={slideProduct.id}>
+    <div className="text-center" key={props.slidePro.id}>
       <Card className="productCard border-0 position-relative">
         <Link
-          to={`/product/${slideProduct.id}`}
+          to={`/product/${props.slidePro.id}`}
           className="shadow my-2 rounded-4"
         >
           <Card.Img
@@ -27,7 +28,7 @@ const ProductCart = (props) => {
             src={slideProduct.src}
             alt={slideProduct.alt}
             onClick={() => {
-              LoadCurrentItem(props.slideProduct);
+              LoadCurrentItem(props.slidePro);
             }}
           />
         </Link>
@@ -36,7 +37,10 @@ const ProductCart = (props) => {
             variant="dark"
             className="wish ms-2"
             size="sm"
-            id={slideProduct.name}
+            id={slideProduct.id}
+            name={props.slidePro.name}
+            onClick={(e) => clickWish(e, props.slidePro)}
+            disabled={props.slidePro.isAddedToWishlist}
           >
             <Icon.Heart />
           </Button>
@@ -46,7 +50,7 @@ const ProductCart = (props) => {
             size="sm"
             id={slideProduct.id}
             name={slideProduct.name}
-            onClick={(e) => addToCart(e, slideProduct)}
+            onClick={(e) => addToCart(e, slideProduct, props.slidePro.id)}
           >
             Add to Cart
           </Button>
@@ -55,7 +59,7 @@ const ProductCart = (props) => {
               variant="dark"
               className="eye ms-2"
               size="sm"
-              onClick={(e) => LoadCurrentItem(e, slideProduct)}
+              onClick={() => LoadCurrentItem(slideProduct)}
             >
               <Icon.Eye />
             </Button>
@@ -66,7 +70,9 @@ const ProductCart = (props) => {
             to={`/product/${slideProduct.id}`}
             className="text-decoration-none"
           >
-            <Card.Title>{slideProduct.name}</Card.Title>
+            <Card.Title onClick={() => LoadCurrentItem(props.slidePro)}>
+              {slideProduct.name}
+            </Card.Title>
           </Link>
           <div className="d-flex justify-content-between align-items-center">
             <div className="d-flex justify-content-start align-items-center">
@@ -94,4 +100,12 @@ const ProductCart = (props) => {
   );
 };
 
-export default ProductCart;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (e, product, id) => dispatch(addToCart(e, product, id)),
+    LoadCurrentItem: (product) => dispatch(LoadCurrentItem(product)),
+  };
+};
+console.log(mapDispatchToProps, "mapDispatchToProps");
+
+export default connect(null, mapDispatchToProps)(ProductCart);
