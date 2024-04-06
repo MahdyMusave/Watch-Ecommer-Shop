@@ -11,6 +11,7 @@ import { connect } from "react-redux";
 
 const TopHeader = ({ cart }) => {
   console.log(cart, "cart");
+
   const wish = useSelector(
     (state) =>
       /*console.log('state', state)*/
@@ -20,13 +21,18 @@ const TopHeader = ({ cart }) => {
   const [cartCounter, setCartCounter] = useState(0);
   const [wishCounter, setWishCounter] = useState(0);
 
-  // useEffect(() => {
-  //   let cartCount = 0;
-  //   cart.forEach((item) => {
-  //     cartCount += item.qty;
-  //   });
-  //   setCartCounter(cartCount);
-  // }, [cart, cartCounter, wish, wishCounter]);
+  useEffect(() => {
+    let cartCount = 0;
+    cart.forEach((item) => {
+      // return console.log(item, "item")
+      cartCount +=item.qty
+    });
+    setCartCounter(cartCount);
+    //   cart.forEach((item) => {
+    //     cartCount += item.qty;
+    //   });
+    //   setCartCounter(cartCount);
+  }, [cart, cartCounter, wish, wishCounter]);
 
   return (
     <>
@@ -61,7 +67,7 @@ const TopHeader = ({ cart }) => {
                   <div className="head-body-inner">
                     <HeartFill className="me-2  "></HeartFill>
                     Shopping Cart
-                    <span className="ms-1"> (0)</span>
+                    <span className="ms-1"> ({cartCounter})</span>
                   </div>
                 </Link>
               </div>
@@ -72,5 +78,11 @@ const TopHeader = ({ cart }) => {
     </>
   );
 };
+const mapStateToProps = (state) => {
+  // console.log(state, "headertopss");
+  return {
+    cart: state.rCart.cart,
+  };
+};
 
-export default TopHeader;
+export default connect(mapStateToProps)(TopHeader);
